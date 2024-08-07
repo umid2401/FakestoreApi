@@ -19,7 +19,7 @@ export default function Header() {
       {!isLoginPage&&(
          <header className="bg-white shadow-sm translate-x-0 inset-0 z-50 my-4 mx-4 h-16 rounded-xl transition-transform duration-300 xl:translate-x-0 border border-blue-gray-100 flex justify-between items-center p-4">
          <div className="flex items-center">
-           <button className="text-gray-500 focus:outline-none ">
+           <button onClick={()=>dispatch(changeLoading(!loading))} className="text-gray-500 focus:outline-none ">
              <FaBars className="text-xl" />
            </button>
          </div>
