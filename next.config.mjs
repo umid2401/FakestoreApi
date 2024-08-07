@@ -1,19 +1,16 @@
-//** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.(js|jsx|ts|tsx)$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          presets: ['next/babel'],
-        },
-      },
-    });
-    return config;
-  },
+  reactStrictMode: false,
+  transpilePackages: [
+    "antd",
+    "rc-util",
+    "@babel/runtime",
+    "@ant-design/icons",
+    "@ant-design/icons-svg",
+    "rc-pagination",
+    "rc-picker",
+    "rc-tree",
+    "rc-table",
+  ],
 };
 
-export default  nextConfig;
+export default nextConfig;
