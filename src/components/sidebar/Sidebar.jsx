@@ -51,7 +51,7 @@ export default function Sidebar() {
             
             <li className=" flex items-center mx-4">
               <Link
-                href="/news"
+                href="/add-product"
                 className="font-bold text-center transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-base py-3 rounded-lg bg-gradient-to-tr  hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] flex items-center gap-4 px-4 capitalize w-full"
               >
                 <FaNewspaper className="text-lg" />
