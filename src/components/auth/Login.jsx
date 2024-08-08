@@ -40,8 +40,6 @@ export default function Login() {
   const toMain = (e) => {
     e.preventDefault();
     router.push("/");
-
-    console.log(router.query);
   };
   useEffect(() => {
     // get_data();

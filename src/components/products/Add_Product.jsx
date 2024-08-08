@@ -22,10 +22,8 @@ const AddProductForm = () => {
       const response = await fetch(`${api_url}/products`);
       const data = await response?.json();
       setProducts(data)
-      console.log(data);
     } catch (error) {
-      console.log(error);
-    }
+      toast.error("Error")    }
   };
   const post_data = async () =>{
     try {
@@ -55,8 +53,7 @@ const AddProductForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await post_data();
-   
-    
+  
   };
  useEffect(()=>{
     get_data();
@@ -66,7 +63,7 @@ const AddProductForm = () => {
       onSubmit={handleSubmit}
       className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md space-y-4"
     >
-        {console.log(products)}
+        
       <div>
         <label className="block text-sm font-medium text-gray-700">Title</label>
         <input
